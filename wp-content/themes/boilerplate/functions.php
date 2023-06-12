@@ -1,9 +1,10 @@
 <?php
 
-function my_theme_load_theme_textdomain() {
-    load_theme_textdomain( 'my-theme', get_template_directory() . '/languages' );
+function my_theme_load_theme_textdomain()
+{
+  load_theme_textdomain('my-theme', get_template_directory() . '/languages');
 }
-add_action( 'after_setup_theme', 'my_theme_load_theme_textdomain' );
+add_action('after_setup_theme', 'my_theme_load_theme_textdomain');
 
 
 
@@ -22,3 +23,7 @@ register_nav_menus(
     'mobile_menu' => __('Mobile Menu'),
   )
 );
+
+
+
+add_theme_support('post-thumbnails');

@@ -34,12 +34,20 @@ jQuery(document).ready(function ($) {
 
 
     // for dropdown
-    jQuery(".dropdown-toggle").on("click", function (e) {
-        jQuery(this).next(".dropdown-menu").toggleClass("show");
-        if ($(e.target).closest(".navbar").length === 0) {
-            // Remove the "show" class from all dropdown menus
-            $('.dropdown-menu').removeClass("show");
-        }
+    $(function () {
+        let dropdownMenu = $(".dropdown-menu");
+        // Show/hide the dropdown menu
+        jQuery(".dropdown-toggle").on("click", function () {
+            dropdownMenu.toggleClass("show");
+        });
+
+        // Hide the dropdown menu when clicked outside
+        jQuery(document).on("click", function (event) {
+            var target = jQuery(event.target);
+            if (!target.closest(".dropdown").length) {
+                dropdownMenu.removeClass("show");
+            }
+        });
     });
 
 

@@ -16,7 +16,7 @@
 
 
 <!-- footer -->
-<footer class="py-5">
+<footer class="py-5 bg-light">
   <div class="container">
     <div class="row">
       <div class="col-lg-3">
