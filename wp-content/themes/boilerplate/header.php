@@ -78,12 +78,12 @@
 
         <?php wp_nav_menu(
           array(
-            'theme_location' => 'header_menu',
-            'container' => 'div',
-            'container_class' => 'collapse navbar-collapse',
-            'menu_class' => 'navbar-nav m-auto mb-2 mb-lg-0',
+            'theme_location' => __('header_menu'),
+            'container' => __('div'),
+            'container_class' => __('collapse navbar-collapse'),
+            'menu_class' => __('navbar-nav m-auto mb-2 mb-lg-0'),
             'depth' => '3',
-            'fallback_cb' => 'WP_Bootstrap_Navwalker::fallback',
+            'fallback_cb' => __('WP_Bootstrap_Navwalker::fallback'),
             'walker' => new WP_Bootstrap_Navwalker(),
           )
         );
